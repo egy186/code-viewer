@@ -57,10 +57,10 @@
   };
 
   const lang = extname(global.location.pathname);
-  const ishtmlSource = lang.includes('htm')
-    || global.location.plotocol === 'view-source:';
+  const isHtml = global.document.contentType === 'text/html';
+  const isSource = global.location.protocol === 'view-source:';
   const pre = global.document.querySelector('body > pre:first-child');
-  if (pre && !ishtmlSource && (isSupported(lang) || lang === '')) {
+  if (!isHtml && pre && !isSource && (isSupported(lang) || lang === '')) {
     pre.classList.add('lang-' + lang);
 
     const frag = global.document.createDocumentFragment();
