@@ -7,9 +7,9 @@
     "url": "https://github.com/egy186/code-viewer/issues"
   },
   "devDependencies": {
+    "@egy186/eslint-config": "^0.8.0",
     "bower": "^1.7.1",
-    "eslint": "^1.10.3",
-    "eslint-config-eslint": "^1.0.1",
+    "eslint": "^2.13.1",
     "jpm": "^1.0.4",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",

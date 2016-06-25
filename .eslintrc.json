@@ -1,0 +1,8 @@
+{
+  "env": {
+    "commonjs": true
+  },
+  "extends": [
+    "@egy186/eslint-config"
+  ]
+}
