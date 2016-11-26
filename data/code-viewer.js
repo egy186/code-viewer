@@ -6,13 +6,6 @@ const extname = path => {
 };
 
 const isSupported = lang => {
-  // [].concat(...hljs.listLanguages().map(lang => {
-  //   const aliases = hljs.getLanguage(lang).aliases;
-  //   return Array.isArray(aliases) ? aliases.concat(lang) : lang;
-  // }))
-  // .map(lang => lang.toLowerCase())
-  // .filter((val, index, arr) => arr.lastIndexOf(val) === index)
-  // .sort()
   // https://github.com/components/highlightjs/releases/tag/9.0.0
   const langs = [
     '1c', 'accesslog', 'actionscript', 'ado', 'adoc', 'apache', 'apacheconf',
@@ -60,7 +53,7 @@ if (!isHtml && pre && !isSource && (isSupported(lang) || lang === '')) {
   pre.classList.add(`lang-${lang}`);
 
   const frag = document.createDocumentFragment();
-  // append css
+  // Append css
   [
     `chrome://code-viewer/content/lib/highlightjs/styles/${self.options.syntaxTheme || 'default'}.css`,
     'chrome://code-viewer/content/css/style.css'
@@ -70,7 +63,7 @@ if (!isHtml && pre && !isSource && (isSupported(lang) || lang === '')) {
     css.href = path;
     frag.appendChild(css);
   });
-  // append js
+  // Append js
   [
     'chrome://code-viewer/content/lib/highlightjs/highlight.pack.min.js',
     'chrome://code-viewer/content/js/script.js'
@@ -81,6 +74,6 @@ if (!isHtml && pre && !isSource && (isSupported(lang) || lang === '')) {
     frag.appendChild(js);
   });
 
-  // append to head
+  // Append to head
   document.head.appendChild(frag);
 }

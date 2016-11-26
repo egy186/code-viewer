@@ -9,7 +9,7 @@
     // https://github.com/components/highlightjs
     hljs.highlightBlock(pre);
     org.parentNode.replaceChild(pre, org);
-    // background color
+    // Background color
     document.body.style.backgroundColor = getComputedStyle(pre).backgroundColor;
   });
 })();
