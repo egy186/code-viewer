@@ -15,9 +15,9 @@
   const isHtml = document.contentType === 'text/html';
   const pre = document.querySelector('body > pre:first-child');
   if (!isHtml && pre) {
-    // If (lang !== '') {
-    pre.classList.add(`lang-${lang}`);
-    // }
+    if (lang !== '') {
+      pre.classList.add(`lang-${lang}`);
+    }
 
     const fragment = document.createDocumentFragment();
     // Append css
