@@ -1,0 +1,39 @@
+{
+  "name": "Code Viewer",
+  "description": "Highlight JavaScript and JSON with highlight.js.",
+  "version": "0.1.3",
+  "applications": {
+    "gecko": {
+      "id": "@code-viewer",
+      "strict_min_version": "53.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "index.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "homepage_url": "https://github.com/egy186/code-viewer#readme",
+  "icons": {
+    "48": "icon.png",
+    "96": "icon@2x.png"
+  },
+  "manifest_version": 2,
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "resources/*"
+  ]
+}

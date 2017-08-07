@@ -1,5 +1,3 @@
-*.log
-*.xpi
-bower_components
-chrome/content/lib
 node_modules
+resources/lib
+web-ext-artifacts

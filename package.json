@@ -7,16 +7,13 @@
     "url": "https://github.com/egy186/code-viewer/issues"
   },
   "devDependencies": {
-    "@egy186/eslint-config": "^0.19.0",
-    "bower": "^1.7.1",
-    "eslint": "^3.11.0",
-    "jpm": "^1.0.4",
-    "mkdirp": "^0.5.1",
-    "ncp": "^2.0.0",
-    "rimraf": "^2.4.4"
-  },
-  "engines": {
-    "firefox": ">=38.0a1"
+    "@egy186/eslint-config": "^0.27.0",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.3.0",
+    "highlightjs": "github:components/highlightjs#9.12.0",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1",
+    "web-ext": "^2.0.0"
   },
   "homepage": "https://github.com/egy186/code-viewer#readme",
   "keywords": [
@@ -24,282 +21,17 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "permissions": {
-    "private-browsing": true
-  },
-  "preferences": [
-    {
-      "name": "syntaxTheme",
-      "title": "Syntax Theme",
-      "type": "menulist",
-      "value": "default",
-      "options": [
-        {
-          "label": "Agate",
-          "value": "agate"
-        },
-        {
-          "label": "Android Studio",
-          "value": "androidstudio"
-        },
-        {
-          "label": "Arta",
-          "value": "arta"
-        },
-        {
-          "label": "Ascetic",
-          "value": "ascetic"
-        },
-        {
-          "label": "Atelier Cave - Dark",
-          "value": "atelier-cave.dark"
-        },
-        {
-          "label": "Atelier Cave - Light",
-          "value": "atelier-cave.light"
-        },
-        {
-          "label": "Atelier Dune - Dark",
-          "value": "atelier-dune.dark"
-        },
-        {
-          "label": "Atelier Dune - Light",
-          "value": "atelier-dune.light"
-        },
-        {
-          "label": "Atelier Estuary - Dark",
-          "value": "atelier-estuary.dark"
-        },
-        {
-          "label": "Atelier Estuary - Light",
-          "value": "atelier-estuary.light"
-        },
-        {
-          "label": "Atelier Forest - Dark",
-          "value": "atelier-forest.dark"
-        },
-        {
-          "label": "Atelier Forest - Light",
-          "value": "atelier-forest.light"
-        },
-        {
-          "label": "Atelier Heath - Dark",
-          "value": "atelier-heath.dark"
-        },
-        {
-          "label": "Atelier Heath - Light",
-          "value": "atelier-heath.light"
-        },
-        {
-          "label": "Atelier Lakeside - Dark",
-          "value": "atelier-lakeside.dark"
-        },
-        {
-          "label": "Atelier Lakeside - Light",
-          "value": "atelier-lakeside.light"
-        },
-        {
-          "label": "Atelier Plateau - Dark",
-          "value": "atelier-plateau.dark"
-        },
-        {
-          "label": "Atelier Plateau - Light",
-          "value": "atelier-plateau.light"
-        },
-        {
-          "label": "Atelier Savanna - Dark",
-          "value": "atelier-savanna.dark"
-        },
-        {
-          "label": "Atelier Savanna - Light",
-          "value": "atelier-savanna.light"
-        },
-        {
-          "label": "Atelier Seaside - Dark",
-          "value": "atelier-seaside.dark"
-        },
-        {
-          "label": "Atelier Seaside - Light",
-          "value": "atelier-seaside.light"
-        },
-        {
-          "label": "Atelier Sulphurpool - Dark",
-          "value": "atelier-sulphurpool.dark"
-        },
-        {
-          "label": "Atelier Sulphurpool - Light",
-          "value": "atelier-sulphurpool.light"
-        },
-        {
-          "label": "Brown Paper",
-          "value": "brown_paper"
-        },
-        {
-          "label": "Codepen.io Embed",
-          "value": "codepen-embed"
-        },
-        {
-          "label": "Colorbrewer",
-          "value": "color-brewer"
-        },
-        {
-          "label": "Dark",
-          "value": "dark"
-        },
-        {
-          "label": "Darkula",
-          "value": "darkula"
-        },
-        {
-          "label": "Default",
-          "value": "default"
-        },
-        {
-          "label": "Docco",
-          "value": "docco"
-        },
-        {
-          "label": "FAR",
-          "value": "far"
-        },
-        {
-          "label": "Foundation",
-          "value": "foundation"
-        },
-        {
-          "label": "GitHub",
-          "value": "github"
-        },
-        {
-          "label": "GitHub Gist",
-          "value": "github-gist"
-        },
-        {
-          "label": "Google Code",
-          "value": "googlecode"
-        },
-        {
-          "label": "Hybrid",
-          "value": "hybrid"
-        },
-        {
-          "label": "IDEA",
-          "value": "idea"
-        },
-        {
-          "label": "IR Black",
-          "value": "ir_black"
-        },
-        {
-          "label": "Kimbie - Dark",
-          "value": "kimbie.dark"
-        },
-        {
-          "label": "Kimbie - Light",
-          "value": "kimbie.light"
-        },
-        {
-          "label": "Magula",
-          "value": "magula"
-        },
-        {
-          "label": "Mono Blue",
-          "value": "mono-blue"
-        },
-        {
-          "label": "Monokai",
-          "value": "monokai"
-        },
-        {
-          "label": "Monokai Sublime",
-          "value": "monokai_sublime"
-        },
-        {
-          "label": "Obsidian",
-          "value": "obsidian"
-        },
-        {
-          "label": "Paraíso - Dark",
-          "value": "paraiso.dark"
-        },
-        {
-          "label": "Paraíso - Light",
-          "value": "paraiso.light"
-        },
-        {
-          "label": "Pojoaque",
-          "value": "pojoaque"
-        },
-        {
-          "label": "Railscasts",
-          "value": "railscasts"
-        },
-        {
-          "label": "Rainbow",
-          "value": "rainbow"
-        },
-        {
-          "label": "School Book",
-          "value": "school_book"
-        },
-        {
-          "label": "Solarized - Dark",
-          "value": "solarized_dark"
-        },
-        {
-          "label": "Solarized - Light",
-          "value": "solarized_light"
-        },
-        {
-          "label": "Sunburst",
-          "value": "sunburst"
-        },
-        {
-          "label": "Tomorrow",
-          "value": "tomorrow"
-        },
-        {
-          "label": "Tomorrow Night",
-          "value": "tomorrow-night"
-        },
-        {
-          "label": "Tomorrow Night Blue",
-          "value": "tomorrow-night-blue"
-        },
-        {
-          "label": "Tomorrow Night Bright",
-          "value": "tomorrow-night-bright"
-        },
-        {
-          "label": "Tomorrow Night Eighties",
-          "value": "tomorrow-night-eighties"
-        },
-        {
-          "label": "Visual Studio",
-          "value": "vs"
-        },
-        {
-          "label": "XCode",
-          "value": "xcode"
-        },
-        {
-          "label": "Zenburn",
-          "value": "zenburn"
-        }
-      ]
-    }
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/egy186/code-viewer.git"
   },
   "scripts": {
-    "bower": "bower install && mkdirp chrome/content/lib/highlightjs && ncp bower_components/highlightjs/highlight.pack.min.js chrome/content/lib/highlightjs/highlight.pack.min.js && ncp bower_components/highlightjs/styles chrome/content/lib/highlightjs/styles",
-    "build": "npm run bower && npm run xpi",
-    "clean": "rimraf chrome/content/lib",
-    "lint": "eslint chrome/content/js data index.js",
-    "start": "jpm run",
-    "xpi": "jpm xpi"
-  },
-  "title": "Code Viewer"
+    "build": "web-ext build --ignore-files package-lock.json package.json",
+    "clean": "rimraf resources/lib web-ext-artifacts",
+    "lint": "run-p lint:*",
+    "lint:js": "eslint .",
+    "lint:manifest": "web-ext lint",
+    "prebuild": "copyfiles --up 1 node_modules/highlightjs/highlight.pack.min.js \"node_modules/highlightjs/styles/**/*\" resources/lib",
+    "start": "web-ext run"
+  }
 }

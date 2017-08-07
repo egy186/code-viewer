@@ -1,8 +1,18 @@
 {
-  "env": {
-    "commonjs": true
-  },
   "extends": [
-    "@egy186/eslint-config"
-  ]
+    "@egy186/eslint-config",
+    "@egy186/eslint-config/browser"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "rules": {
+    "array-element-newline": [
+      "error",
+      {
+        "multiline": true,
+        "minItems": 2
+      }
+    ]
+  }
 }
