@@ -1,7 +1,0 @@
-{
-  "name": "code-viewer",
-  "dependencies": {
-    "highlightjs": "9.0.0"
-  },
-  "private": true
-}
