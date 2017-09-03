@@ -1,7 +1,7 @@
 {
   "name": "Code Viewer",
   "description": "Highlight JavaScript and JSON with highlight.js.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "applications": {
     "gecko": {
       "id": "@code-viewer",
