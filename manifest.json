@@ -5,7 +5,8 @@
   "applications": {
     "gecko": {
       "id": "@code-viewer",
-      "strict_min_version": "53.0"
+      "strict_min_version": "53.0",
+      "update_url": "https://egy186.github.io/code-viewer/updates.json"
     }
   },
   "content_scripts": [
