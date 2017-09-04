@@ -26,12 +26,12 @@
     "url": "git+https://github.com/egy186/code-viewer.git"
   },
   "scripts": {
-    "build": "web-ext build --ignore-files package-lock.json package.json",
-    "clean": "rimraf resources/lib web-ext-artifacts",
+    "build": "web-ext build --source-dir src",
+    "clean": "rimraf src/resources/lib web-ext-artifacts",
     "lint": "run-p lint:*",
     "lint:js": "eslint .",
-    "lint:manifest": "web-ext lint",
-    "prebuild": "copyfiles --up 1 node_modules/highlightjs/highlight.pack.min.js \"node_modules/highlightjs/styles/**/*\" resources/lib",
-    "start": "web-ext run"
+    "lint:manifest": "web-ext lint --source-dir src",
+    "prebuild": "copyfiles --up 1 node_modules/highlightjs/highlight.pack.min.js \"node_modules/highlightjs/styles/**/*\" src/resources/lib",
+    "start": "web-ext run --source-dir src"
   }
 }
