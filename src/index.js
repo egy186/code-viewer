@@ -3,8 +3,7 @@
 (async () => {
   'use strict';
 
-  const syntaxTheme = await browser.storage.local.get('syntaxTheme')
-    .then(result => result.syntaxTheme || 'default');
+  const { syntaxTheme = 'default' } = await browser.storage.sync.get('syntaxTheme');
 
   const extname = path => {
     const dot = path.lastIndexOf('.') + 1;

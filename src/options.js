@@ -6,17 +6,12 @@
   const saveOptions = e => {
     e.preventDefault();
     const syntaxTheme = document.querySelector('#syntax-theme').value;
-    browser.storage.local.set({ syntaxTheme })
-      .catch(err => console.error(err));
+    browser.storage.sync.set({ syntaxTheme });
   };
 
-  const restoreOptions = () => {
-    browser.storage.local.get('syntaxTheme')
-      .then(result => {
-        const syntaxTheme = result.syntaxTheme || 'default';
-        document.querySelector('#syntax-theme').value = syntaxTheme;
-      })
-      .catch(err => console.error(err));
+  const restoreOptions = async () => {
+    const { syntaxTheme = 'default' } = await browser.storage.sync.get('syntaxTheme');
+    document.querySelector('#syntax-theme').value = syntaxTheme;
   };
 
   document.addEventListener('DOMContentLoaded', () => {
