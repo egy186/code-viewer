@@ -1,3 +1,3 @@
 # Code Viewer
 
-Highlight JavaScript and JSON with highlight.js.
+Highlight source code syntax with highlight.js.

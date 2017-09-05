@@ -1,6 +1,6 @@
 {
   "name": "Code Viewer",
-  "description": "Highlight JavaScript and JSON with highlight.js.",
+  "description": "Highlight source code syntax with highlight.js.",
   "version": "1.0.1",
   "applications": {
     "gecko": {
