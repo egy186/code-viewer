@@ -28,10 +28,13 @@
   "scripts": {
     "build": "web-ext build --source-dir src",
     "clean": "rimraf src/resources/lib web-ext-artifacts",
+    "copy": "copyfiles --up 1 node_modules/highlightjs/highlight.pack.min.js \"node_modules/highlightjs/styles/**/*\" src/resources/lib",
     "lint": "run-p lint:*",
     "lint:js": "eslint .",
     "lint:manifest": "web-ext lint --source-dir src",
-    "prebuild": "copyfiles --up 1 node_modules/highlightjs/highlight.pack.min.js \"node_modules/highlightjs/styles/**/*\" src/resources/lib",
+    "prebuild": "npm run copy",
+    "prerelease": "npm run copy",
+    "release": "web-ext sign --api-key $API_KEY --api-secret $API_SECRET --source-dir src",
     "start": "web-ext run --source-dir src"
   }
 }
