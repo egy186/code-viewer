@@ -1,7 +1,7 @@
 {
   "name": "code-viewer",
   "description": "Highlight source code syntax with highlight.js.",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "author": "egy186",
   "bugs": {
     "url": "https://github.com/egy186/code-viewer/issues"
