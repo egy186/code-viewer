@@ -10,7 +10,9 @@
     return dot === 0 ? '' : path.substr(dot).toLowerCase();
   };
 
-  const lang = extname(location.pathname);
+  const ext = extname(location.pathname);
+  const ignore = ['cgi'];
+  const lang = ignore.includes(ext) ? '' : ext;
   const isHtml = document.contentType === 'text/html';
   const pre = document.querySelector('body > pre:first-child');
   if (!isHtml && pre) {
