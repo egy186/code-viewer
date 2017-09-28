@@ -11,7 +11,10 @@
   };
 
   const ext = extname(location.pathname);
-  const ignore = ['cgi'];
+  const ignore = [
+    'cgi',
+    'txt'
+  ];
   const lang = ignore.includes(ext) ? '' : ext;
   const isHtml = document.contentType === 'text/html';
   const pre = document.querySelector('body > pre:first-child');
