@@ -3,24 +3,9 @@
 
   const { syntaxTheme = 'default' } = await browser.storage.sync.get('syntaxTheme');
 
-  const extname = path => {
-    const dot = path.lastIndexOf('.') + 1;
-    return dot === 0 ? '' : path.substr(dot).toLowerCase();
-  };
-
-  const ext = extname(location.pathname);
-  const ignore = [
-    'cgi',
-    'txt'
-  ];
-  const lang = ignore.includes(ext) ? '' : ext;
   const isHtml = document.contentType === 'text/html';
   const pre = document.querySelector('body > pre:first-child');
   if (!isHtml && pre) {
-    if (lang !== '') {
-      pre.classList.add(`lang-${lang}`);
-    }
-
     const fragment = document.createDocumentFragment();
     // Append css
     [
