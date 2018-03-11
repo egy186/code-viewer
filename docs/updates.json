@@ -29,6 +29,10 @@
         {
           "update_link": "https://github.com/egy186/code-viewer/releases/download/v1.1.5/code_viewer-1.1.5-an.fx.xpi",
           "version": "1.1.5"
+        },
+        {
+          "update_link": "https://github.com/egy186/code-viewer/releases/download/v1.2.0/code_viewer-1.2.0-an.fx.xpi",
+          "version": "1.2.0"
         }
       ]
     }
