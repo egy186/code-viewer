@@ -9,8 +9,8 @@
     const fragment = document.createDocumentFragment();
     // Append css
     [
-      browser.extension.getURL(`resources/lib/highlightjs/styles/${syntaxTheme}.css`),
-      browser.extension.getURL('resources/css/style.css')
+      browser.runtime.getURL(`resources/lib/highlightjs/styles/${syntaxTheme}.css`),
+      browser.runtime.getURL('resources/css/style.css')
     ].forEach(path => {
       const css = document.createElement('link');
       css.rel = 'stylesheet';
@@ -19,8 +19,8 @@
     });
     // Append js
     [
-      browser.extension.getURL('resources/lib/highlightjs/highlight.pack.min.js'),
-      browser.extension.getURL('resources/js/script.js')
+      browser.runtime.getURL('resources/lib/highlightjs/highlight.pack.min.js'),
+      browser.runtime.getURL('resources/js/script.js')
     ].forEach(path => {
       const js = document.createElement('script');
       js.type = 'text/javascript';
