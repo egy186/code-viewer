@@ -7,10 +7,10 @@
     "url": "https://github.com/egy186/code-viewer/issues"
   },
   "devDependencies": {
-    "@egy186/eslint-config": "^0.50.0",
+    "@egy186/eslint-config": "^0.72.0",
     "copyfiles": "^2.4.0",
-    "eslint": "^7.10.0",
-    "eslint-plugin-jsdoc": "^30.6.3",
+    "eslint": "^8.13.0",
+    "eslint-plugin-jsdoc": "^39.2.7",
     "eslint-plugin-node": "^11.1.0",
     "highlightjs": "github:components/highlightjs#9.12.0",
     "npm-run-all": "^4.1.5",
@@ -18,7 +18,7 @@
     "web-ext": "^5.2.0"
   },
   "engines": {
-    "node": ">=12.18.3"
+    "node": ">=16.13.2"
   },
   "homepage": "https://github.com/egy186/code-viewer#readme",
   "keywords": [
