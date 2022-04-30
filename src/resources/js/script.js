@@ -21,7 +21,7 @@
       pre.classList.add(`lang-${ext}`);
     }
     // https://github.com/components/highlightjs
-    hljs.highlightBlock(pre);
+    hljs.highlightElement(pre);
     org.parentNode.replaceChild(pre, org);
     // Background color
     document.body.style.backgroundColor = getComputedStyle(pre).backgroundColor;
