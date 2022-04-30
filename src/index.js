@@ -9,7 +9,7 @@
     const fragment = document.createDocumentFragment();
     // Append css
     [
-      browser.runtime.getURL(`resources/lib/highlightjs/styles/${syntaxTheme}.css`),
+      browser.runtime.getURL(`resources/lib/@highlightjs/cdn-assets/styles/${syntaxTheme}.min.css`),
       browser.runtime.getURL('resources/css/style.css')
     ].forEach(path => {
       const css = document.createElement('link');
@@ -19,7 +19,7 @@
     });
     // Append js
     [
-      browser.runtime.getURL('resources/lib/highlightjs/highlight.pack.min.js'),
+      browser.runtime.getURL('resources/lib/@highlightjs/cdn-assets/highlight.min.js'),
       browser.runtime.getURL('resources/js/script.js')
     ].forEach(path => {
       const js = document.createElement('script');
