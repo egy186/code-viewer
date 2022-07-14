@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@egy186/eslint-config": "^0.76.1",
-    "@highlightjs/cdn-assets": "^11.5.1",
+    "@highlightjs/cdn-assets": "^11.6.0",
     "copyfiles": "^2.4.0",
     "eslint": "^8.19.0",
     "eslint-plugin-jsdoc": "^39.3.0",
