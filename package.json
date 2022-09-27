@@ -7,7 +7,7 @@
     "url": "https://github.com/egy186/code-viewer/issues"
   },
   "devDependencies": {
-    "@egy186/eslint-config": "^0.79.0",
+    "@egy186/eslint-config": "^0.80.0",
     "@highlightjs/cdn-assets": "^11.6.0",
     "copyfiles": "^2.4.0",
     "eslint": "^8.24.0",
