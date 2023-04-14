@@ -3,6 +3,22 @@
     "@egy186/eslint-config",
     "@egy186/eslint-config/node"
   ],
+  "ignorePatterns": [
+    "src/resources/lib"
+  ],
+  "overrides": [
+    {
+      "env": {
+        "webextensions": true
+      },
+      "extends": [
+        "@egy186/eslint-config/browser"
+      ],
+      "files": [
+        "src/**/*.js"
+      ]
+    }
+  ],
   "rules": {
     "array-element-newline": [
       "error",
