@@ -33,7 +33,7 @@
   "scripts": {
     "build": "web-ext build",
     "clean": "rimraf src/resources/lib web-ext-artifacts",
-    "copy": "copyfiles --up 1 node_modules/@highlightjs/cdn-assets/highlight.min.js \"node_modules/@highlightjs/cdn-assets/styles/**/*\" src/resources/lib",
+    "copy": "copyfiles --up 1 node_modules/@highlightjs/cdn-assets/highlight.min.js \"node_modules/@highlightjs/cdn-assets/styles/**/*\" --exclude \"node_modules/@highlightjs/cdn-assets/styles/**/*.css\" src/resources/lib && copyfiles --up 1 \"node_modules/@highlightjs/cdn-assets/styles/**/*.min.css\" src/resources/lib",
     "lint": "run-p lint:*",
     "lint:js": "eslint .",
     "lint:manifest": "web-ext lint --self-hosted",
