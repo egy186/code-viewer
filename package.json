@@ -7,12 +7,10 @@
     "url": "https://github.com/egy186/code-viewer/issues"
   },
   "devDependencies": {
-    "@egy186/eslint-config": "^0.91.0",
+    "@egy186/eslint-config": "^0.105.2",
     "@highlightjs/cdn-assets": "^11.9.0",
     "copyfiles": "^2.4.0",
     "eslint": "^8.56.0",
-    "eslint-plugin-jsdoc": "^44.2.4",
-    "eslint-plugin-n": "^16.6.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.0",
     "web-ext": "^7.9.0"
