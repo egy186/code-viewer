@@ -41,6 +41,10 @@
         {
           "update_link": "https://github.com/egy186/code-viewer/releases/download/v1.4.0/code_viewer-1.4.0.xpi",
           "version": "1.4.0"
+        },
+        {
+          "update_link": "https://github.com/egy186/code-viewer/releases/download/v1.5.0/code_viewer-1.5.0.xpi",
+          "version": "1.5.0"
         }
       ]
     }
