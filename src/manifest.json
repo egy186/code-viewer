@@ -2,7 +2,7 @@
   "name": "Code Viewer",
   "description": "Highlight source code syntax with highlight.js.",
   "version": "1.4.0",
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "@code-viewer",
       "strict_min_version": "68.0",
