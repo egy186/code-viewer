@@ -16,7 +16,7 @@
     "web-ext": "^8.2.0"
   },
   "engines": {
-    "node": ">=16.13.2"
+    "node": ">=20.15.1"
   },
   "homepage": "https://github.com/egy186/code-viewer#readme",
   "keywords": [
