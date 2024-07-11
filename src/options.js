@@ -1,6 +1,4 @@
-(() => {
-  'use strict';
-
+{
   const saveOptions = e => {
     e.preventDefault();
     const syntaxTheme = document.querySelector('#syntax-theme').value;
@@ -16,4 +14,4 @@
     restoreOptions();
     document.querySelector('#settings').addEventListener('submit', saveOptions);
   });
-})();
+}

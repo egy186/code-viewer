@@ -1,8 +1,6 @@
 /* global hljs */
 
-(() => {
-  'use strict';
-
+{
   const extname = path => {
     const dot = path.lastIndexOf('.') + 1;
     return dot === 0 ? '' : path.substr(dot).toLowerCase();
@@ -35,4 +33,4 @@
   } else {
     highlight();
   }
-})();
+}

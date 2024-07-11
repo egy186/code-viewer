@@ -1,6 +1,4 @@
-(async () => {
-  'use strict';
-
+{
   const { syntaxTheme = 'default' } = await browser.storage.sync.get('syntaxTheme');
 
   const isHtml = document.contentType === 'text/html';
@@ -33,4 +31,4 @@
     // Append to head
     document.head.appendChild(fragment);
   }
-})();
+}

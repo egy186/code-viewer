@@ -1,7 +1,6 @@
 {
   "extends": [
-    "@egy186/eslint-config",
-    "@egy186/eslint-config/commonjs"
+    "@egy186/eslint-config"
   ],
   "ignorePatterns": [
     "src/resources/lib"
@@ -16,7 +15,10 @@
       ],
       "files": [
         "src/**/*.js"
-      ]
+      ],
+      "rules": {
+        "import/unambiguous": "off"
+      }
     }
   ],
   "rules": {
