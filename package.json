@@ -29,7 +29,7 @@
   "scripts": {
     "build": "parcel build && npm run copy",
     "clean": "rimraf dist web-ext-artifacts",
-    "copy": "copyfiles --up 1 node_modules/@highlightjs/cdn-assets/highlight.min.js \"node_modules/@highlightjs/cdn-assets/styles/**/*\" --exclude \"node_modules/@highlightjs/cdn-assets/styles/**/*.css\" dist/resources/lib && copyfiles --up 1 \"node_modules/@highlightjs/cdn-assets/styles/**/*.min.css\" dist/resources/lib && copyfiles --up 1 \"src/resources/**\" dist",
+    "copy": "copyfiles --up 1 node_modules/@highlightjs/cdn-assets/highlight.min.js \"node_modules/@highlightjs/cdn-assets/styles/**/*\" --exclude \"node_modules/@highlightjs/cdn-assets/styles/**/*.css\" dist/resources/lib && copyfiles --up 1 \"node_modules/@highlightjs/cdn-assets/styles/**/*.min.css\" dist/resources/lib",
     "lint": "npm run lint:js && npm run lint:manifest",
     "lint:js": "eslint .",
     "lint:manifest": "web-ext lint --self-hosted",
@@ -40,7 +40,11 @@
     "start": "web-ext run --devtools",
     "version": "node lib/version.js && git add docs/updates.json src/manifest.json"
   },
-  "source": "src/manifest.json",
+  "source": [
+    "src/manifest.json",
+    "src/resources/css/style.css",
+    "src/resources/js/script.js"
+  ],
   "targets": {
     "default": {
       "sourceMap": false
