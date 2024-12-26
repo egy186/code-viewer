@@ -1,10 +1,11 @@
-// eslint-disable-next-line max-statements, no-void
-void (async (): Promise<void> => {
-  const isHtml = document.contentType === 'text/html';
-  const pre = document.querySelector('body > pre:first-child');
+import type { CodeViewerOptions } from './options.js';
 
-  if (!isHtml && pre) {
-    const { syntaxTheme = 'default' } = await browser.storage.sync.get('syntaxTheme');
+const isHtml = document.contentType === 'text/html';
+const pre = document.querySelector('body > pre:first-child');
+
+if (!isHtml && pre) {
+  const inject = async (): Promise<void> => {
+    const { syntaxTheme = 'default' } = await browser.storage.sync.get('syntaxTheme') as CodeViewerOptions;
 
     const fragment = document.createDocumentFragment();
     // Append css
@@ -25,5 +26,8 @@ void (async (): Promise<void> => {
 
     // Append to head
     document.head.appendChild(fragment);
-  }
-})();
+  };
+
+  // eslint-disable-next-line no-void
+  void inject();
+}
