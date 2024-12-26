@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "js": [
-        "index.js"
+        "index.ts"
       ],
       "matches": [
         "<all_urls>"

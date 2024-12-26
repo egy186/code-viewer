@@ -1,5 +1,5 @@
-// eslint-disable-next-line max-statements
-(async () => {
+// eslint-disable-next-line max-statements, no-void
+void (async (): Promise<void> => {
   const isHtml = document.contentType === 'text/html';
   const pre = document.querySelector('body > pre:first-child');
 
