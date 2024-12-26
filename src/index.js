@@ -1,13 +1,15 @@
+// eslint-disable-next-line max-statements
 (async () => {
-  const { syntaxTheme = 'default' } = await browser.storage.sync.get('syntaxTheme');
-
   const isHtml = document.contentType === 'text/html';
   const pre = document.querySelector('body > pre:first-child');
+
   if (!isHtml && pre) {
+    const { syntaxTheme = 'default' } = await browser.storage.sync.get('syntaxTheme');
+
     const fragment = document.createDocumentFragment();
     // Append css
     [
-      browser.runtime.getURL(`resources/lib/@highlightjs/cdn-assets/styles/${syntaxTheme}.min.css`),
+      browser.runtime.getURL(`resources/lib/highlight.js/styles/${syntaxTheme}.min.css`),
       browser.runtime.getURL('resources/css/style.css')
     ].forEach(path => {
       const css = document.createElement('link');
@@ -16,17 +18,10 @@
       fragment.appendChild(css);
     });
     // Append js
-    [
-      browser.runtime.getURL('resources/lib/@highlightjs/cdn-assets/highlight.min.js'),
-      browser.runtime.getURL('resources/js/script.js')
-    ].forEach(path => {
-      const js = document.createElement('script');
-      js.type = 'text/javascript';
-      js.charset = 'utf-8';
-      js.src = path;
-      js.async = true;
-      fragment.appendChild(js);
-    });
+    const js = document.createElement('script');
+    js.src = browser.runtime.getURL('resources/js/script.js');
+    js.async = true;
+    fragment.appendChild(js);
 
     // Append to head
     document.head.appendChild(fragment);

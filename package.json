@@ -8,11 +8,11 @@
   },
   "devDependencies": {
     "@egy186/eslint-config": "^2.3.0",
-    "@highlightjs/cdn-assets": "^11.11.0",
     "@parcel/config-webextension": "^2.13.3",
     "copyfiles": "^2.4.0",
     "eslint": "^9.17.0",
     "globals": "^15.14.0",
+    "highlight.js": "^11.11.1",
     "parcel": "^2.13.3",
     "rimraf": "^6.0.1",
     "web-ext": "^8.3.0"
@@ -29,7 +29,7 @@
   "scripts": {
     "build": "parcel build && npm run copy",
     "clean": "rimraf dist web-ext-artifacts",
-    "copy": "copyfiles --up 1 node_modules/@highlightjs/cdn-assets/highlight.min.js \"node_modules/@highlightjs/cdn-assets/styles/**/*\" --exclude \"node_modules/@highlightjs/cdn-assets/styles/**/*.css\" dist/resources/lib && copyfiles --up 1 \"node_modules/@highlightjs/cdn-assets/styles/**/*.min.css\" dist/resources/lib",
+    "copy": "copyfiles --up 1 \"node_modules/highlight.js/styles/**/*\" --exclude \"node_modules/highlight.js/styles/**/*.css\" dist/resources/lib && copyfiles --up 1 \"node_modules/highlight.js/styles/**/*.min.css\" dist/resources/lib",
     "lint": "npm run lint:js && npm run lint:manifest",
     "lint:js": "eslint .",
     "lint:manifest": "web-ext lint --self-hosted",
