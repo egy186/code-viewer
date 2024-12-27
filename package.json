@@ -8,38 +8,54 @@
   },
   "devDependencies": {
     "@egy186/eslint-config": "^2.3.0",
-    "@highlightjs/cdn-assets": "^11.11.0",
+    "@parcel/config-webextension": "^2.13.3",
+    "@types/firefox-webext-browser": "^120.0.4",
     "copyfiles": "^2.4.0",
     "eslint": "^9.17.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
     "globals": "^15.14.0",
+    "highlight.js": "^11.11.1",
+    "jiti": "^2.4.2",
+    "parcel": "^2.13.3",
     "rimraf": "^6.0.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2",
     "web-ext": "^8.3.0"
-  },
-  "engines": {
-    "node": ">=20.15.1"
   },
   "homepage": "https://github.com/egy186/code-viewer#readme",
   "keywords": [
     "highlight"
   ],
   "license": "MIT",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/egy186/code-viewer.git"
   },
   "scripts": {
-    "build": "web-ext build",
-    "clean": "rimraf src/resources/lib web-ext-artifacts",
-    "copy": "copyfiles --up 1 node_modules/@highlightjs/cdn-assets/highlight.min.js \"node_modules/@highlightjs/cdn-assets/styles/**/*\" --exclude \"node_modules/@highlightjs/cdn-assets/styles/**/*.css\" src/resources/lib && copyfiles --up 1 \"node_modules/@highlightjs/cdn-assets/styles/**/*.min.css\" src/resources/lib",
-    "lint": "npm run lint:js && npm run lint:manifest",
-    "lint:js": "eslint .",
+    "build": "parcel build && npm run copy",
+    "clean": "rimraf dist web-ext-artifacts",
+    "copy": "copyfiles --up 1 \"node_modules/highlight.js/styles/**/*\" --exclude \"node_modules/highlight.js/styles/**/*.css\" dist/resources/lib && copyfiles --up 1 \"node_modules/highlight.js/styles/**/*.min.css\" dist/resources/lib",
+    "lint": "npm run lint:eslint && npm run lint:typecheck && npm run lint:manifest",
+    "lint:eslint": "eslint",
     "lint:manifest": "web-ext lint --self-hosted",
-    "prebuild": "npm run copy",
-    "prerelease": "npm run copy",
+    "lint:typecheck": "tsc --build",
+    "prebuild": "rimraf dist",
+    "prelint:manifest": "npm run build",
+    "prerelease": "npm run build",
+    "prestart": "npm run build",
     "release": "web-ext sign --channel unlisted --api-key $API_KEY --api-secret $API_SECRET",
     "start": "web-ext run --devtools",
-    "version": "node lib/version.js && git add docs/updates.json src/manifest.json"
+    "version": "jiti lib/version.ts && git add docs/updates.json src/manifest.json"
+  },
+  "source": [
+    "src/manifest.json",
+    "src/resources/css/style.css",
+    "src/resources/js/script.ts"
+  ],
+  "targets": {
+    "default": {
+      "sourceMap": false
+    }
   },
   "type": "module"
 }

@@ -2,18 +2,22 @@
 import { base, browser } from '@egy186/eslint-config';
 // eslint-disable-next-line n/no-unpublished-import
 import globals from 'globals';
+// eslint-disable-next-line import/no-unresolved, n/no-unpublished-import
+import { typescriptConfig } from '@egy186/eslint-config/typescript';
 
 const config = [
-  { ignores: ['src/resources/lib'] },
-  base,
+  { ignores: ['dist'] },
+  {
+    ...base,
+    files: ['lib/**/*.ts', '*.{mjs,js}']
+  },
   {
     ...browser,
-    files: ['src/**/*.js'],
+    files: ['src/**/*.ts'],
     languageOptions: {
       ...browser.languageOptions,
       globals: {
-        ...globals.es2023,
-        ...globals.browser,
+        ...browser.languageOptions.globals,
         ...globals.webextensions
       }
     },
@@ -28,7 +32,8 @@ const config = [
       ],
       'import/unambiguous': 'off'
     }
-  }
+  },
+  typescriptConfig({ projectService: { allowDefaultProject: ['lib/*.ts'] } })
 ];
 
 export default config;
