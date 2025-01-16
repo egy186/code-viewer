@@ -1,4 +1,4 @@
-// eslint-disable-next-line n/no-missing-import, n/no-unpublished-import
+// eslint-disable-next-line n/no-missing-import
 import hljs from 'highlight.js';
 
 const extname = (path: string): string => {
