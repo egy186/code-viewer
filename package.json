@@ -1,10 +1,41 @@
 {
   "name": "code-viewer",
-  "description": "Highlight source code syntax with highlight.js.",
   "version": "1.6.1",
-  "author": "egy186",
+  "description": "Highlight source code syntax with highlight.js.",
+  "keywords": [
+    "highlight"
+  ],
+  "homepage": "https://github.com/egy186/code-viewer#readme",
   "bugs": {
     "url": "https://github.com/egy186/code-viewer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egy186/code-viewer.git"
+  },
+  "license": "MIT",
+  "author": "egy186",
+  "type": "module",
+  "source": [
+    "src/manifest.json",
+    "src/resources/css/style.css",
+    "src/resources/js/script.ts"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "parcel build && npm run copy",
+    "clean": "rimraf dist web-ext-artifacts",
+    "copy": "copyfiles --up 1 \"node_modules/highlight.js/styles/**/*\" --exclude \"node_modules/highlight.js/styles/**/*.css\" dist/resources/lib && copyfiles --up 1 \"node_modules/highlight.js/styles/**/*.min.css\" dist/resources/lib",
+    "lint": "npm run lint:eslint && npm run lint:typecheck && npm run lint:manifest",
+    "lint:eslint": "eslint",
+    "prelint:manifest": "npm run build",
+    "lint:manifest": "web-ext lint --self-hosted",
+    "lint:typecheck": "tsc --build",
+    "prerelease": "npm run build",
+    "release": "web-ext sign --channel unlisted --api-key $API_KEY --api-secret $API_SECRET",
+    "prestart": "npm run build",
+    "start": "web-ext run --devtools",
+    "version": "jiti lib/version.ts && git add docs/updates.json src/manifest.json"
   },
   "devDependencies": {
     "@egy186/eslint-config": "^2.5.0",
@@ -22,40 +53,9 @@
     "typescript-eslint": "^8.20.0",
     "web-ext": "^8.3.0"
   },
-  "homepage": "https://github.com/egy186/code-viewer#readme",
-  "keywords": [
-    "highlight"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/egy186/code-viewer.git"
-  },
-  "scripts": {
-    "build": "parcel build && npm run copy",
-    "clean": "rimraf dist web-ext-artifacts",
-    "copy": "copyfiles --up 1 \"node_modules/highlight.js/styles/**/*\" --exclude \"node_modules/highlight.js/styles/**/*.css\" dist/resources/lib && copyfiles --up 1 \"node_modules/highlight.js/styles/**/*.min.css\" dist/resources/lib",
-    "lint": "npm run lint:eslint && npm run lint:typecheck && npm run lint:manifest",
-    "lint:eslint": "eslint",
-    "lint:manifest": "web-ext lint --self-hosted",
-    "lint:typecheck": "tsc --build",
-    "prebuild": "rimraf dist",
-    "prelint:manifest": "npm run build",
-    "prerelease": "npm run build",
-    "prestart": "npm run build",
-    "release": "web-ext sign --channel unlisted --api-key $API_KEY --api-secret $API_SECRET",
-    "start": "web-ext run --devtools",
-    "version": "jiti lib/version.ts && git add docs/updates.json src/manifest.json"
-  },
-  "source": [
-    "src/manifest.json",
-    "src/resources/css/style.css",
-    "src/resources/js/script.ts"
-  ],
   "targets": {
     "default": {
       "sourceMap": false
     }
-  },
-  "type": "module"
+  }
 }
