@@ -10,6 +10,7 @@ if (!isHtml && pre) {
     const fragment = document.createDocumentFragment();
     // Append css
     [
+      // eslint-disable-next-line @stylistic/array-element-newline
       browser.runtime.getURL(`resources/lib/highlight.js/styles/${syntaxTheme}.min.css`),
       browser.runtime.getURL('resources/css/style.css')
     ].forEach(path => {
