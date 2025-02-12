@@ -45,7 +45,7 @@
     "copyfiles": "^2.4.0",
     "eslint": "^9.20.0",
     "eslint-import-resolver-typescript": "^3.7.0",
-    "globals": "^15.14.0",
+    "globals": "^15.15.0",
     "highlight.js": "^11.11.1",
     "jiti": "^2.4.2",
     "parcel": "^2.13.3",
