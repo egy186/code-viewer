@@ -50,7 +50,7 @@
     "jiti": "^2.4.2",
     "parcel": "^2.13.3",
     "rimraf": "^6.0.1",
-    "typescript": "^5.7.2",
+    "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.0",
     "web-ext": "^8.4.0"
   },
