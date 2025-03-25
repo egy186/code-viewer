@@ -17,10 +17,10 @@ const updateManifest = JSON.parse(await readFile(updateManifestFile, 'utf8')) as
   readonly addons: {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     readonly '@code-viewer': {
-      readonly updates: {
+      readonly updates: Array<{
         readonly update_link: string;
         readonly version: string;
-      }[];
+      }>;
     };
   };
 };
