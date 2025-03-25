@@ -39,7 +39,7 @@
     "version": "jiti lib/version.ts && git add docs/updates.json src/manifest.json"
   },
   "devDependencies": {
-    "@egy186/eslint-config": "^2.7.0",
+    "@egy186/eslint-config": "^2.8.0",
     "@parcel/config-webextension": "^2.14.0",
     "@types/firefox-webext-browser": "^120.0.4",
     "copyfiles": "^2.4.0",
