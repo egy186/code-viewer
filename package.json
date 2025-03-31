@@ -51,7 +51,7 @@
     "parcel": "^2.14.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.2",
-    "typescript-eslint": "^8.28.0",
+    "typescript-eslint": "^8.29.0",
     "web-ext": "^8.5.0"
   },
   "targets": {
