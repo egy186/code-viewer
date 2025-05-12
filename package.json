@@ -48,7 +48,7 @@
     "globals": "^16.1.0",
     "highlight.js": "^11.11.1",
     "jiti": "^2.4.2",
-    "parcel": "^2.14.0",
+    "parcel": "^2.15.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.32.0",
