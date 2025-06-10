@@ -22,6 +22,10 @@
     "src/resources/css/style.css",
     "src/resources/js/script.ts"
   ],
+  "files": [
+    "dist",
+    "docs"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "parcel build && npm run copy",
