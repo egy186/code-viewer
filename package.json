@@ -56,7 +56,7 @@
     "rimraf": "^6.0.1",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.46.0",
-    "web-ext": "^8.10.0"
+    "web-ext": "^9.0.0"
   },
   "targets": {
     "default": {
