@@ -45,7 +45,7 @@
   "devDependencies": {
     "@egy186/eslint-config": "^3.6.0",
     "@parcel/config-webextension": "^2.16.0",
-    "@types/firefox-webext-browser": "^120.0.4",
+    "@types/firefox-webext-browser": "^143.0.0",
     "copyfiles": "^2.4.0",
     "eslint": "^9.38.0",
     "eslint-import-resolver-typescript": "^4.4.1",
