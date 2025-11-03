@@ -47,7 +47,7 @@
     "@parcel/config-webextension": "^2.16.0",
     "@types/firefox-webext-browser": "^143.0.0",
     "copyfiles": "^2.4.0",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.1",
     "eslint-import-resolver-typescript": "^4.4.1",
     "globals": "^16.5.0",
     "highlight.js": "^11.11.1",
