@@ -49,7 +49,7 @@
     "copyfiles": "^2.4.0",
     "eslint": "^9.39.1",
     "eslint-import-resolver-typescript": "^4.4.1",
-    "globals": "^16.5.0",
+    "globals": "^17.0.0",
     "highlight.js": "^11.11.1",
     "jiti": "^2.6.0",
     "parcel": "^2.16.0",
