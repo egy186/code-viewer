@@ -16,12 +16,15 @@ const restoreOptions = async (): Promise<void> => {
   syntaxThemeSelect.value = syntaxTheme;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-misused-promises
-document.addEventListener('DOMContentLoaded', async (): Promise<void> => {
-  await restoreOptions();
+document.addEventListener('DOMContentLoaded', () => {
+  // eslint-disable-next-line no-void
+  void restoreOptions();
+});
 
-  // eslint-disable-next-line @typescript-eslint/no-misused-promises
-  (document.querySelector('#settings') as HTMLFormElement).addEventListener('submit', saveOptions);
+// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+(document.querySelector('#settings') as HTMLFormElement).addEventListener('submit', e => {
+  // eslint-disable-next-line no-void
+  void saveOptions(e);
 });
 
 // eslint-disable-next-line import/prefer-default-export
