@@ -18,6 +18,7 @@ const updateManifest = JSON.parse(await readFile(updateManifestFile, 'utf8')) as
     // eslint-disable-next-line @typescript-eslint/naming-convention
     readonly '@code-viewer': {
       readonly updates: Array<{
+        // eslint-disable-next-line @typescript-eslint/naming-convention
         readonly update_link: string;
         readonly version: string;
       }>;
@@ -25,6 +26,7 @@ const updateManifest = JSON.parse(await readFile(updateManifestFile, 'utf8')) as
   };
 };
 updateManifest.addons['@code-viewer'].updates.push({
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   update_link: `https://github.com/egy186/code-viewer/releases/download/v${version}/code_viewer-${version}.xpi`,
   version
 });
