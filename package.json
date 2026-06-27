@@ -1,6 +1,6 @@
 {
   "name": "code-viewer",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "private": true,
   "description": "Highlight source code syntax with highlight.js.",
   "keywords": [
