@@ -29,7 +29,7 @@ const manifest = defineManifest({
   },
   manifest_version: 3,
   name: 'Code Viewer',
-  options_ui: { page: 'src/options.html' },
+  options_ui: { page: 'options.html' },
   permissions: ['activeTab', 'storage'],
   version: pkg.version,
   web_accessible_resources: [

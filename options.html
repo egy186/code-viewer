@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Options</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #23222b;
+        color: #fbfbfe;
+      }
+    }
+  </style>
+  <script type="module" src="src/options.ts"></script>
+</head>
+<body>
+   <form id="settings">
+    <label for="syntax-theme">Syntax Theme</label>
+    <select type="text" id="syntax-theme">
+<!-- THEME_LIST -->
+    </select>
+    <button type="submit">Save</button>
+   </form>
+</body>
+</html>
