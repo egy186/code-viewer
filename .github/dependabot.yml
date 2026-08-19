@@ -11,10 +11,6 @@ updates:
           - eslint
           - eslint-import-resolver-typescript
           - typescript-eslint
-      parcel:
-        patterns:
-          - '@parcel/*'
-          - parcel
     cooldown:
       default-days: 3
       exclude:
