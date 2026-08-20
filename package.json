@@ -29,7 +29,7 @@
     "lint:eslint": "eslint",
     "prelint:manifest": "npm run build",
     "lint:manifest": "web-ext lint --self-hosted",
-    "lint:typecheck": "tsc --build",
+    "lint:typecheck": "tsc",
     "prerelease": "npm run build",
     "release": "web-ext sign --channel unlisted --api-key $API_KEY --api-secret $API_SECRET",
     "prestart": "npm run build",
