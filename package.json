@@ -41,7 +41,7 @@
     "@egy186/eslint-config": "^4.8.0",
     "@types/firefox-webext-browser": "^143.0.0",
     "copyfiles": "^2.4.1",
-    "eslint": "^9.39.5",
+    "eslint": "^10.9.1",
     "eslint-import-resolver-typescript": "^4.4.5",
     "globals": "^17.11.0",
     "highlight.js": "^11.12.0",
