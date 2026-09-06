@@ -6,9 +6,7 @@ import pkg from './package.json' with { type: 'json' };
 const manifest = defineManifest({
   browser_specific_settings: {
     gecko: {
-      data_collection_permissions: {
-        required: ['none']
-      },
+      data_collection_permissions: { required: ['none'] },
       id: '@code-viewer',
       strict_min_version: '142.0',
       update_url: 'https://egy186.github.io/code-viewer/updates.json'
