@@ -57,7 +57,7 @@ const injectThemeList = (): Plugin => ({
 
 const config = defineConfig({
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       input: {
         script: 'src/resources/js/script.ts',
         style: 'src/resources/css/style.css'
